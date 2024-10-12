@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список поездок</title>
+</head>
+<body>
+    <h1>Список поездок</h1>
+    <ul>
+        {% for trip in trips %}
+            <li>{{ trip.title }} - {{ trip.start_date }} до {{ trip.end_date }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'trip_create' %}">Добавить новую поездку</a>  <!-- Убедитесь, что у вас есть URL с именем 'trip_create' -->
+</body>
+</html>

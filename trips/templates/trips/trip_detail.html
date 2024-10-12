@@ -1,0 +1,15 @@
+<!-- trips/templates/trips/trip_detail.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ trip.title }}</title>
+</head>
+<body>
+    <h1>{{ trip.title }}</h1>
+    <p>Описание: {{ trip.description }}</p>  <!-- Предполагается, что у вас есть поле description -->
+    <p>Дата начала: {{ trip.start_date }}</p>  <!-- Предполагается, что у вас есть поле start_date -->
+    <p>Дата окончания: {{ trip.end_date }}</p>  <!-- Предполагается, что у вас есть поле end_date -->
+    <a href="{% url 'trip_list' %}">Назад к списку путешествий</a>
+</body>
+</html>
